@@ -133,28 +133,6 @@ HexToBuffer(hex) {
 	return buf
 }
 
-; FindPattern(data, pattern) {
-; 	local matches := []
-; 	local max := data.Size - pattern.Size
-
-; 	Loop max + 1 {
-; 		local offset := A_Index - 1
-; 		local found := true
-
-; 		Loop pattern.Size {
-; 			if NumGet(data, offset + A_Index - 1, "UChar") != NumGet(pattern, A_Index - 1, "UChar") {
-; 				found := false
-; 				break
-; 			}
-; 		}
-
-; 		if found
-; 			matches.Push(offset)
-; 	}
-
-; 	return matches
-; }
-
 FindPattern(data, pattern) {
     local matches := []
 
