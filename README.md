@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> (Unconfirmed) This tool *is* confirmed to work work for the Steam version of Far Cry 6. However I'm unsure if the Ubisoft version's files are the same as Steam's and therefore this may not work for the Ubisoft version.
+
 > [!NOTE]
 > This tool is written in AutoHotkey and compiled with ahk2exe, meaning AutoHotkey is bundled and does not need to be installed separately.
 
