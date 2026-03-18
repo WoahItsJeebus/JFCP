@@ -1,7 +1,7 @@
 ﻿#Requires AutoHotkey v2.0.19
 #SingleInstance Force
 
-global version := "1.1.0"
+global version := "1.1.1"
 global UI_Width := 560
 global UI_Height := 190
 global DLL_PATH := ""
@@ -141,7 +141,7 @@ ApplyPatch(*) {
 			patchedMatches := FindPattern(data, patchedPattern)
 			if patchedMatches.Length > 0 {
 				prgRead.Value := 0
-				txtStatus.Value := "Status: Patched"
+				txtStatus.Value := "Status: Already patched!"
 			} else {
 				txtStatus.Value := "Status: Pattern not found. Version may have changed."
 			}
@@ -283,7 +283,7 @@ CheckPatchStatus(*) {
 			txtStatus.Value := "Status: Not Patched"
 		} else if patchedMatches.Length > 0 {
 			prgRead.Value := 0
-			txtStatus.Value := "Status: Patched"
+			txtStatus.Value := "Status: Already patched!"
 		} else {
 			prgRead.Value := 0
 			txtStatus.Value := "Status: Unknown (pattern not found)"
@@ -318,7 +318,7 @@ FindPattern(data, pattern) {
             , "ptr", dataPtr + offset
             , "int", firstByte
             , "uptr", remaining
-            , "ptr")
+            , "cdecl ptr")
 
         if !ptr
             break
